@@ -1,0 +1,28 @@
+.checkbox{
+    position: relative;
+}
+.button{
+    border-radius:50%;background-color: #008CBA; 
+        font-size: 20px;
+        box-shadow: 0 8px 16px 0 
+        rgba(0,0,0,0.2);
+}
+.hero{
+    background-image: url('/assets/bkg2.png');
+    background-size:cover;
+    background-position:center center;
+}
+.input{
+    width: 60%;
+    text-align: center;
+    display: block;
+    margin-right: auto;
+    margin-left: 27%;
+    margin-bottom: 5%;
+    margin-top:15%
+    
+}
+.field{
+    margin-bottom: 5%;
+    margin-left: 27%;   
+}
