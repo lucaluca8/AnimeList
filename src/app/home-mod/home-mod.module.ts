@@ -6,6 +6,9 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from '../header/header.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -14,10 +17,13 @@ import { HeaderComponent } from '../header/header.component';
     LoginComponent,
     RegisterComponent,
     HeaderComponent
+    
   ],
   imports: [
     CommonModule,
-    HomeModRoutingModule
+    HomeModRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModModule { }
