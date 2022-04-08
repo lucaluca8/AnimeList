@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AnimeInterface } from '../AnimeInterface';
 import { MatTableDataSource } from '@angular/material/table';
 import { TableService } from '../table.service';
+import { searchValidator } from './validator';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -12,12 +14,23 @@ import { TableService } from '../table.service';
 export class RakingListComponent implements OnInit {
 displayedColumns: string[] = ['name', 'rating', 'image'];
   public  animeList: AnimeInterface[] = this.tableService.getElements();
-
   dataSource = new MatTableDataSource(this.animeList);
 
-  constructor(private tableService: TableService) {}
+  validatorForm:FormGroup;
 
-  ngOnInit(): void {}
+  constructor(private tableService: TableService, public fb:FormBuilder) {}
+
+  ngOnInit(): void {
+    this.validatorForm=this.fb.group(
+      {
+      search: ['',[searchValidator]]
+      }
+    );
+  }
+
+  get search(){
+    return this.validatorForm.get('search');
+  }
 
   getElements() {
     this.animeList = this.tableService.getElements();

@@ -1,9 +1,5 @@
 .content {
     margin: 3rem 7rem;
-  
-    button {
-      margin: 0 0.5rem;
-    }
   }
 
   table {
@@ -17,8 +13,16 @@
       font-size: 16px;
     }
   }
+  .help{
+    color:rgb(238, 0, 0);
+}
 
 .hero{
   background-image: url('/assets/rankingList.jpg');
+}
+
+.input{
+  width:50%;
+  margin-left:23%
 }
   
