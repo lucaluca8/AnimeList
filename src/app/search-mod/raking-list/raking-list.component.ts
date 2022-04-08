@@ -13,34 +13,29 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class RakingListComponent implements OnInit {
 displayedColumns: string[] = ['name', 'rating', 'image'];
-  public  animeList: AnimeInterface[] = this.tableService.getElements();
-  dataSource = new MatTableDataSource(this.animeList);
+public  animeList=<any>[]
 
-  validatorForm:FormGroup;
 
-  constructor(private tableService: TableService, public fb:FormBuilder) {}
+validatorForm:FormGroup;
+  dataSource: MatTableDataSource<unknown>;
 
-  ngOnInit(): void {
-    this.validatorForm=this.fb.group(
-      {
-      search: ['',[searchValidator]]
-      }
-    );
-  }
+constructor(private tableService: TableService, public fb:FormBuilder) {}
 
-  get search(){
-    return this.validatorForm.get('search');
-  }
+ngOnInit(): void {
+  this.validatorForm=this.fb.group(
+    {
+    search: ['',[searchValidator]]
+    }
+  );
+  this.animeList = this.tableService.getAnimes();
+  this.dataSource = new MatTableDataSource(this.animeList);
+}
 
-  getElements() {
-    this.animeList = this.tableService.getElements();
-    this.dataSource = new MatTableDataSource(this.animeList);
-    console.log(this.animeList);
-  }
+get search(){
+  return this.validatorForm.get('search');
+}
 
-  clearData(){
-    this.animeList=[];
-    this.dataSource = new MatTableDataSource(this.animeList);
-  }
+
+
 
 }

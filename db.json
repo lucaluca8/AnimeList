@@ -1,0 +1,27 @@
+{
+  "anime": [
+    {
+      "title": "anime1",
+      "rating": "100",
+      "image": "elimage"
+    },
+    {
+      "title": "anime2",
+      "rating": "100",
+      "image": "elimage"
+
+    },
+    {
+      "title": "anime3",
+      "rating": "100",
+      "image": "elimage"
+
+    },
+    {
+      "title": "anime4",
+      "rating": "100",
+      "image": "elimage"
+
+    }
+  ]
+}
