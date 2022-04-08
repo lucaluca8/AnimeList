@@ -38,10 +38,15 @@ export class RegisterComponent implements OnInit {
   get password(){
     return this.validatorForm.get('password');
   }
-  get confirmPassword(){
-    return this.validatorForm.get('confirmPassword');
-  }
 
+  registerButton(){
+    const message =`Registration succsefully`;
+    if(this.validatorForm.get('name').value==="" ||this.validatorForm.get('username').value==="" || 
+      this.validatorForm.get('email').value==="" ||  this.validatorForm.get('password').value==="")
+      alert("You cannot leave empty fields")
+      else
+        alert(message);
+  }
   
   }
 
