@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AnimeInterface } from '../animeInterface';
+import { AnimeInterface } from '../AnimeInterface';
 import { MatTableDataSource } from '@angular/material/table';
 import { TableService } from '../table.service';
 
@@ -10,7 +10,7 @@ import { TableService } from '../table.service';
   styleUrls: ['./raking-list.component.scss']
 })
 export class RakingListComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'rating', 'image'];
+displayedColumns: string[] = ['name', 'rating', 'image'];
   public  animeList: AnimeInterface[] = this.tableService.getElements();
 
   dataSource = new MatTableDataSource(this.animeList);
