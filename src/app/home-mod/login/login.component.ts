@@ -14,7 +14,9 @@ export class LoginComponent implements OnInit {
   constructor(private homeService:HomeServiceService) { }
 
   ngOnInit(): void {
-    this.accounts = this.homeService.getAccounts();
+      this.homeService.getAccounts().subscribe(data=>{
+        this.accounts=data;
+      });
   }
   logInPressed(){
     var check = false
@@ -27,7 +29,9 @@ export class LoginComponent implements OnInit {
         if(data.username === this.username && data.password === this.password) {
           check = true;
         alert("LogIn succesfully");       
-      }})
+      }
+      console.log(data.username)
+    })
         
       if(check === false)
       {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../home-mod/registerClass';
 import { ManageService } from './manage.service';
 
 @Component({
@@ -10,25 +11,44 @@ export class ManageAccountComponent implements OnInit {
 
   public  accounts=<any>[]
   id:number=null;
-  name:string = "";
-  username:string = ""
+  username:string = "";
+  accName:string = "";
+  user:User = new User();
+  email:string="";
+  password:string="";
 
   constructor(private manageServices:ManageService) { }
 
   ngOnInit(): void {
-    this.accounts = this.manageServices.getAccounts();
+    this.manageServices.getAccounts().subscribe(data=>{
+      this.accounts=data;
+    });
   }
   getAccountId():void {
     this.accounts.forEach(data=>{
-      if(data.username === this.username || data.name === this.name) {
-        this.id=data.id;
-     console.log(data.username)      
-    }})
+      if(data.name === this.accName) {
+        this.user=data;
+        this.id=data.id;       
+    }
+    console.log(data.id)  })
   }
-  changeName():void{
-    this.getAccountId();
-    console.log(this.id);
-    console.log(this.name)
+  changeAccountInfo():void{
+    
+    if(this.accName !="")
+    {console.log(this.email);
+      console.log(this.accName);
+      console.log(this.username);
+      if(this.username !="")
+        this.user.username=this.username;
+      if(this.email!="")
+        this.user.email=this.email;
+      if(this.password!="")
+        this.user.password=this.password;
+      this.getAccountId();
+      this.manageServices.updateAccount(this.id,this.user).subscribe(data=>{
+        console.log(data);
+      });
+  }
   }
 
 }

@@ -10,7 +10,7 @@ export class TableService {
   constructor(private http:HttpClient) {}
  
   getAnimes(){
-    return this.http.get('http://localhost:3000/anime');
+    return this.http.get(`http://localhost:3000/anime`);
   }
   getAnimeByName(name:string){
     return this.http.get(`http://localhost:3000/anime/${name}`);

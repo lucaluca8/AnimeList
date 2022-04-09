@@ -6,14 +6,12 @@
         <h1 class="title" style="color:darksalmon;">
             Manage account
         </h1>
-        <div name="name" class="container">
-          <div class="field" style="color:white;">
-            Name
+        <div name="account" class="container">
+          <div class="field" style="color:rgb(245, 11, 11);">
+            Introuduce account name here
           </div>     
           <input type="text" placeholder="John Black" class="input"
-          [(ngModel)]="name" />
-            <button class="button is-rounded is-danger 
-            is-family-monospace is-black" (click)="changeName()">Change name</button>
+          [(ngModel)]="accName" />
         </div>
         <div class="container">
           <div class="field" style="color:white;">
@@ -21,24 +19,21 @@
           </div>
           <input type="text" placeholder="master32" class="input">
         </div>
-          <button class="button is-rounded is-danger 
-          is-family-monospace is-black">Change username</button>
         <div class="container">
             <div class="field" style="color:white;">
               E-mail
             </div>
-            <input type="text" placeholder="master32" class="input">
-            <button class="button is-rounded is-danger 
-          is-family-monospace is-black">Change username</button>
+            <input type="text" placeholder="something@something.com" class="input"
+            [(ngModel)]="email">
           </div>
           <div class="container">
             <div class="field" style="color:white;">
               Password
             </div>
             <input type="password" placeholder="Terminator342" class="input"
-            required>
+            required  [(ngModel)]="password">
             <button class="button is-rounded is-danger 
-            is-family-monospace is-black">Change name</button>
+            is-family-monospace is-black is-fullwidth" (click)="changeAccountInfo()">Update your account info </button>
           </div>
         <div class="columns is-centered">         
       </div>
