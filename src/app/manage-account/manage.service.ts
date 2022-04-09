@@ -19,6 +19,6 @@ export class ManageService {
   {
     var endPoint = `/${id}`;
     console.log(this.path+endPoint)
-    return this.http.put(this.path + endPoint,user);
+    return this.http.put(this.path + endPoint, user);
   }
 }

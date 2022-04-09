@@ -30,20 +30,19 @@ export class ManageAccountComponent implements OnInit {
         this.user=data;
         this.id=data.id;       
     }
-    console.log(data.id)  })
+    })
   }
   changeAccountInfo():void{
     
     if(this.accName !="")
-    {console.log(this.email);
-      console.log(this.accName);
-      console.log(this.username);
+    {
       if(this.username !="")
         this.user.username=this.username;
       if(this.email!="")
         this.user.email=this.email;
       if(this.password!="")
         this.user.password=this.password;
+      console.log(this.username)
       this.getAccountId();
       this.manageServices.updateAccount(this.id,this.user).subscribe(data=>{
         console.log(data);
