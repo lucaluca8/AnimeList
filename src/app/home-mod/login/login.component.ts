@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
     var check = false
     console.log(this.username);
     console.log(this.password);
-    console.log("binded");
     if(this.username !="" && this.password !="")
     {
       

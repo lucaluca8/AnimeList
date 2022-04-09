@@ -1,1 +1,46 @@
-<p>manage-account works!</p>
+<section class="hero is-fullheight">
+    <section class="section">
+        <style>
+            h1 {text-align: center;}
+        </style>
+        <h1 class="title" style="color:darksalmon;">
+            Manage account
+        </h1>
+        <div name="name" class="container">
+          <div class="field" style="color:white;">
+            Name
+          </div>     
+          <input type="text" placeholder="John Black" class="input"
+          [(ngModel)]="name" />
+            <button class="button is-rounded is-danger 
+            is-family-monospace is-black" (click)="changeName()">Change name</button>
+        </div>
+        <div class="container">
+          <div class="field" style="color:white;">
+            Username
+          </div>
+          <input type="text" placeholder="master32" class="input">
+        </div>
+          <button class="button is-rounded is-danger 
+          is-family-monospace is-black">Change username</button>
+        <div class="container">
+            <div class="field" style="color:white;">
+              E-mail
+            </div>
+            <input type="text" placeholder="master32" class="input">
+            <button class="button is-rounded is-danger 
+          is-family-monospace is-black">Change username</button>
+          </div>
+          <div class="container">
+            <div class="field" style="color:white;">
+              Password
+            </div>
+            <input type="password" placeholder="Terminator342" class="input"
+            required>
+            <button class="button is-rounded is-danger 
+            is-family-monospace is-black">Change name</button>
+          </div>
+        <div class="columns is-centered">         
+      </div>
+    </section>
+  </section>

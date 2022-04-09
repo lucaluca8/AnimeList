@@ -7,6 +7,10 @@ const routes: Routes = [
     path:'search',
     loadChildren:()=>import('./search-mod/search-mod.module').then((module)=>(module).SearchModModule)
   },
+  {
+    path:':ManageAccount',
+    component:ManageAccountComponent
+  },
   { 
     path:'',
     loadChildren:()=>import('./home-mod/home-mod.module').then((module)=>(module).HomeModModule)
