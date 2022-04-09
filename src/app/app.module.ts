@@ -8,12 +8,14 @@ import {HttpClientModule} from '@angular/common/http';
 import { HomeModModule } from './home-mod/home-mod.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
+import { ManageAccountComponent } from './manage-account/manage-account.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ManageAccountComponent
   ],
   imports: [
     BrowserModule,
