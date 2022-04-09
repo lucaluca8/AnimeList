@@ -1,27 +1,21 @@
 {
   "anime": [
     {
-      "title": "anime1",
+      "id":1,
+      "name": "Blue Period",
       "rating": "100",
-      "image": "elimage"
+      "nr_episodes": 12,
+      "image": "https://www.animegeek.com/wp-content/uploads/2021/11/Blue-Period-Season-2-release-date-on-Netflix-Anime.jpg"
+      
     },
-    {
-      "title": "anime2",
-      "rating": "100",
-      "image": "elimage"
-
-    },
-    {
-      "title": "anime3",
-      "rating": "100",
-      "image": "elimage"
-
-    },
-    {
-      "title": "anime4",
-      "rating": "100",
-      "image": "elimage"
-
-    }
-  ]
+    
+      {
+        "id":2,
+        "name": "Jujutsu Kaisen",
+        "rating": "100",
+        "nr_episodes": 12,
+        "image": "elimage"
+  
+      }
+    ]
 }

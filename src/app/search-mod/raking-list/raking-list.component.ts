@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { TableService } from '../table.service';
 import { searchValidator } from './validator';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -12,14 +13,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./raking-list.component.scss']
 })
 export class RakingListComponent implements OnInit {
-displayedColumns: string[] = ['name', 'rating', 'image'];
+displayedColumns: string[] = ['name', 'rating', 'nr_episodes'];
 public  animeList=<any>[]
-
 
 validatorForm:FormGroup;
   dataSource: MatTableDataSource<unknown>;
 
-constructor(private tableService: TableService, public fb:FormBuilder) {}
+constructor(private tableService: TableService, public fb:FormBuilder  ) {}
 
 ngOnInit(): void {
   this.validatorForm=this.fb.group(
@@ -28,7 +28,13 @@ ngOnInit(): void {
     }
   );
   this.animeList = this.tableService.getAnimes();
-  this.dataSource = new MatTableDataSource(this.animeList);
+  
+  this.tableService.getAnimes().subscribe(data=>{
+    this.animeList = data;
+    this.dataSource = new MatTableDataSource(this.animeList);
+  });
+  
+  
 }
 
 get search(){

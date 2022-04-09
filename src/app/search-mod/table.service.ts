@@ -12,6 +12,9 @@ export class TableService {
   getAnimes(){
     return this.http.get('http://localhost:3000/anime');
   }
-
+  getAnimeByName(name:string){
+    return this.http.get(`http://localhost:3000/anime/${name}`);
+      
+  }
   
 }

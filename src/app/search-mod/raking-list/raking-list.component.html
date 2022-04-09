@@ -16,19 +16,20 @@
           <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="animeList.length>0">
           <!-- Name Column -->
             <ng-container matColumnDef="name">
-              <th mat-header-cell *matHeaderCellDef>Name</th>
-              <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+              <th mat-header-cell *matHeaderCellDef style="text-align: center;">Name</th>
+              <td mat-cell *matCellDef="let element" style="text-align: center;">
+             <a routerLink="/search/{{ element.id }}">{{ element.name }}</a></td>
             </ng-container>
       
             <!-- Rating Column -->
             <ng-container matColumnDef="rating">
-              <th mat-header-cell *matHeaderCellDef>Rating</th>
-              <td mat-cell *matCellDef="let element">{{ element.rating }}</td>
+              <th mat-header-cell *matHeaderCellDef style="text-align: center;">Rating</th>
+              <td mat-cell *matCellDef="let element" style="text-align: center;">{{ element.rating }}</td>
             </ng-container>
     
-            <ng-container matColumnDef="image">
-              <th mat-header-cell *matHeaderCellDef>Image</th>
-              <td mat-cell *matCellDef="let element">{{ element.image }}</td>
+            <ng-container matColumnDef="nr_episodes">
+              <th mat-header-cell *matHeaderCellDef style="text-align: center;">Number of episodes</th>
+              <td mat-cell *matCellDef="let element" style="text-align: center;">{{ element.nr_episodes }}</td>
             </ng-container>
       
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
