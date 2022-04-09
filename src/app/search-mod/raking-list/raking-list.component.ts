@@ -16,6 +16,12 @@ export class RakingListComponent implements OnInit {
 displayedColumns: string[] = ['name', 'rating', 'nr_episodes'];
 public  animeList=<any>[]
 
+inputSb:string = "";
+searchResult! : any;
+searchedId:any;
+check:boolean = false;
+
+
 validatorForm:FormGroup;
   dataSource: MatTableDataSource<unknown>;
 
@@ -39,6 +45,31 @@ ngOnInit(): void {
 
 get search(){
   return this.validatorForm.get('search');
+}
+
+searchFunction(){
+  console.log("binded");
+  if(this.inputSb !="")
+  {
+    
+    this.animeList.forEach(data=>{
+      if(data.name==this.inputSb) {
+      this.searchResult=data;
+      if(this.check === false)
+        alert("Anime found!! \n Press again to go to anime page :)");
+      this.check = true;
+      this.searchedId=this.searchResult.id;
+      
+    }})
+      
+    if(this.check === false)
+    {
+      alert("Anime not found");
+    }
+  }
+  else{
+    alert("Search box cannot be empty");
+  }
 }
 
 

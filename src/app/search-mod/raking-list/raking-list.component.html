@@ -7,8 +7,10 @@
             Anime Ranking
         </h1>
         <div>
-          <input type="text" placeholder="Search" class="input" formControlName="search">
-          <button class="button is-small is-danger is-family-monospace">Search</button>
+          <input type="text" placeholder="Search" class="input" formControlName="search"
+          [(ngModel)]="inputSb">
+          <button class="button is-small is-danger is-family-monospace"
+          (click)="searchFunction()" routerLink="/search/{{ searchedId }}">Search</button>
           <div id="e" class="help is-error" *ngIf="search.errors?.['searchValid']" style="text-align: center;">
             Do not use special characters</div>
         </div>
