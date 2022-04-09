@@ -1,7 +1,7 @@
 import { AbstractControl} from '@angular/forms';
 
 export function nameValidator(control: AbstractControl) {
-  if (control.value.length>16 && control.value) {
+  if (control.value?.length>16 && control.value) {
     return { nameValid: true };
   }
   return null;

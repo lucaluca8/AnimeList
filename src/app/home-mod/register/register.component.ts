@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HomeServiceService } from '../home-service.service';
+import { User } from '../registerClass';
 import { nameValidator,specialCharactersValidator,emailValidator, 
   passwordContentsValidator} from '../validators/name.validator';
 
@@ -10,9 +12,12 @@ import { nameValidator,specialCharactersValidator,emailValidator,
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(public fb:FormBuilder) { }
+  user:User = new User();
+
+  constructor(public fb:FormBuilder,private homeService:HomeServiceService) { }
 
   validatorForm:FormGroup;
+  public  accounts=<any>[]
 
   ngOnInit(): void {
     this.validatorForm=this.fb.group(
@@ -21,9 +26,10 @@ export class RegisterComponent implements OnInit {
       username:['',[Validators.required,nameValidator,specialCharactersValidator]],
       email:['',[Validators.required,emailValidator]],
       password:['',[Validators.required,passwordContentsValidator]],
-      confirmPassword: ['', Validators.required]
+      security: ['', [Validators.required,nameValidator,specialCharactersValidator]],  
       }
   );
+  this.accounts = this.homeService.getAccounts();
 }
 
   get name() {
@@ -38,6 +44,9 @@ export class RegisterComponent implements OnInit {
   get password(){
     return this.validatorForm.get('password');
   }
+  get security() {
+    return this.validatorForm.get('security');
+  }
 
   registerButton(){
     const message =`Registration succsefully`;
@@ -47,6 +56,17 @@ export class RegisterComponent implements OnInit {
       else
         alert(message);
   }
+  addAccount(){
+
+    this.homeService.addAccount(this.user).subscribe(data=>{
+      console.log(data);
+    })
+    console.log(this.user.name);
+    console.log(this.user.username);
+    console.log(this.user.email);
+    console.log(this.user.password);
+  }
+  
   
   }
 
