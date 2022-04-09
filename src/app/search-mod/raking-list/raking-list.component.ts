@@ -13,10 +13,10 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./raking-list.component.scss']
 })
 export class RakingListComponent implements OnInit {
-displayedColumns: string[] = ['name', 'rating', 'nr_episodes'];
+displayedColumns: string[] = ['id', 'name', 'rating', 'nr_episodes', 'studio', 'genre'];
 public  animeList=<any>[]
 
-inputSb:string = "";
+inputSb:string = "";  
 searchResult! : any;
 searchedId:any;
 check:boolean = false;
