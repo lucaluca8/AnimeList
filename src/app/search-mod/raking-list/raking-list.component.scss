@@ -5,7 +5,8 @@
   table {
     width: 100%;
     margin-top: 2rem;
-    background: transparent;
+    opacity: 70%;
+
   
     th.mat-header-cell {
       background-color: #3f51b545;
@@ -18,15 +19,7 @@
 }
 
 .hero{
-  background-image: url('/assets/rankingList.jpg');
+  background-image: url('/assets/q.jpg');
 }
-.button{
-  margin-left: 2%;
-  margin-top:1%
 
-}
-.input{
-  width:50%;
-  margin-left:23%
-}
-  
+

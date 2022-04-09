@@ -3,19 +3,61 @@
         <style>
             h1 {text-align: center;}
         </style>
-        <h1 class="title" style="color:indigo;">
+        <h1 class="title" style="color:black;">
             Anime Ranking
         </h1>
-        <button class="button is-small is-rounded is-danger 
-        is-family-monospace is-black" routerLink="../ManageAccount">Manage Account</button>
-        <div>
+
+        <nav class="level">
+          <div class="level-left">
+
+            <div class="dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                  <span>Sort Table Content</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+              <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-item" (click)="sortByName()">
+                    <p>Sort by name</p>
+                  </div>
+                  <div class="dropdown-item" (click)="sortByRating()">
+                    <p>Sort by rating</p>
+                  </div>
+                  <div class="dropdown-item" (click)="sortByPopularity()">
+                    <p>Sort by popularity</p>
+                  </div>
+                  <div class="dropdown-item" (click)="sortByStudio()">
+                    <p>Sort by studio</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        
           <input type="text" placeholder="Search" class="input" formControlName="search"
           [(ngModel)]="inputSb">
-          <button class="button is-small is-danger is-family-monospace"
+          <button class="button is-warning is-light"
           (click)="searchFunction()" routerLink="/search/{{ searchedId }}">Search</button>
           <div id="e" class="help is-error" *ngIf="search.errors?.['searchValid']" style="text-align: center;">
-            Do not use special characters</div>
-        </div>
+          Do not use special characters</div>
+
+          <div class="level-right">
+            <div class="level-item">
+              <button class="button is-warning is-light">Add new anime</button>
+            </div>
+            <div class="level-item">
+              <button class="button is-warning is-light" routerLink="../ManageAccount">Manage Account</button>
+          </div>
+          </div>
+        </nav>
+        
+
         <div class="content">
           <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="animeList.length>0">
             

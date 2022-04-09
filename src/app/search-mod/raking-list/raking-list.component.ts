@@ -43,6 +43,29 @@ ngOnInit(): void {
   
 }
 
+sortByName()
+{
+  this.animeList = this.animeList.sort((a, b) => (a.name > b.name ? 1 : -1));
+  this.dataSource = new MatTableDataSource(this.animeList);
+}
+sortByRating()
+{
+  this.animeList = this.animeList.sort((a, b) => (a.rating < b.rating ? 1 : -1));
+  this.dataSource = new MatTableDataSource(this.animeList);
+}
+sortByPopularity()
+{
+  this.animeList = this.animeList.sort((a, b) => (a.id > b.id ? 1 : -1));
+  this.dataSource = new MatTableDataSource(this.animeList);
+}
+sortByStudio()
+{
+  this.animeList = this.animeList.sort((a, b) => (a.studio > b.studio ? 1 : -1));
+  this.dataSource = new MatTableDataSource(this.animeList);
+}
+
+
+
 get search(){
   return this.validatorForm.get('search');
 }
