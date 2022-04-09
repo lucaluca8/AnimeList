@@ -56,7 +56,7 @@ searchFunction(){
       if(data.name==this.inputSb) {
       this.searchResult=data;
       if(this.check === false)
-        alert("Anime found!! \n Press again to go to anime page :)");
+      alert("Anime found!! \n Press again to go to anime page :)");
       this.check = true;
       this.searchedId=this.searchResult.id;
       
