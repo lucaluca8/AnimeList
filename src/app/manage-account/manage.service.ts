@@ -21,4 +21,10 @@ export class ManageService {
     console.log(this.path+endPoint)
     return this.http.put(this.path + endPoint, user);
   }
+   deleteAccount(id:number) {
+    var endPoint = `/${id}`;
+    this.http.delete(this.path + endPoint).subscribe(data => {
+      console.log(data);
+    });
+  }
 }

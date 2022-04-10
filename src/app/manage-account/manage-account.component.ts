@@ -47,7 +47,20 @@ export class ManageAccountComponent implements OnInit {
       this.manageServices.updateAccount(this.id,this.user).subscribe(data=>{
         console.log(data);
       });
+    }
+    else{
+      alert("You need to introduce an account name first")
+    }
   }
+  deleteAccount():void{
+    if(this.accName !="")
+    {
+      this.getAccountId();
+      this.manageServices.deleteAccount(this.id);
+    }
+    else{
+      alert("You need to introduce an account name first")
+    }
   }
 
 }
