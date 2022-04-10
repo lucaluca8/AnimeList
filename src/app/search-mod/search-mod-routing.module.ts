@@ -14,6 +14,10 @@ const routes: Routes = [
     component:ManageAccountComponent
   },
   {
+    path:':manage',
+    loadChildren:()=>import('../manage/manage.module').then((module)=>(module).ManageModule)
+  },
+  {
     path:'',
     component:RakingListComponent
   }

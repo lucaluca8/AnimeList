@@ -47,13 +47,12 @@
           <div id="e" class="help is-error" *ngIf="search.errors?.['searchValid']" style="text-align: center;">
           Do not use special characters</div>
 
-          <div class="level-right">
+          <div class="level-right"> 
+            <div class="level-item"></div>
             <div class="level-item">
-              <button class="button is-warning is-light">Add new anime</button>
-            </div>
-            <div class="level-item">
+              <button class="button is-warning is-light" routerLink="manage/anime">Manage Anime</button>
               <button class="button is-warning is-light" routerLink="../ManageAccount">Manage Account</button>
-          </div>
+            </div>
           </div>
         </nav>
         
