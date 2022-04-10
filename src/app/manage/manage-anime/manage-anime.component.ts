@@ -23,9 +23,17 @@ export class ManageAnimeComponent implements OnInit {
 
 
   addAnime(){
-    this.animeserv.addAnime(this.anime).subscribe(data=>{
-      console.log(data);
-    })
+    if( this.anime.name != "" && this.anime.image != "" && this.anime.description != "" && this.anime.rating !="" && this.anime.genre !=""&&this.anime.studio!="")
+      {
+        this.animeserv.addAnime(this.anime).subscribe(data=>{
+          console.log(data);
+        })
+      }
+      else
+      {
+        alert("You left at least one field empty");
+      }
+    
   }
 
   getAnimeId():void {
@@ -48,10 +56,39 @@ export class ManageAnimeComponent implements OnInit {
     
     if(this.anime.name !="")
     {
-      this.animeserv.updateAnime(this.id,this.anime).subscribe(data=>{
-        console.log(data);
-      });
+      if(this.anime.image != "" && this.anime.description != "" && this.anime.rating !="" && this.anime.genre !=""&&this.anime.studio!="")
+      {
+          this.animeserv.updateAnime(this.id,this.anime).subscribe(data=>{
+        });
+      }
+      else
+      {
+        alert("You need to get the anime info first");
+      }
+
+    }
+    else{
+      alert("You need to introduce an anime name first");
+    }
   }
+
+  deleteAnime():void{
+    if(this.anime.name !="")
+    {
+      if(this.anime.image != "" && this.anime.description != "" && this.anime.rating !="" && this.anime.genre !=""&&this.anime.studio!="")
+      {
+         this.animeserv.deleteAnime(this.id);
+      }
+      else
+      {
+        alert("You need to get the anime info first");
+      }
+
+    }
+    else{
+      alert("You need to introduce an anime name first");
+    }
   }
+
 
 }

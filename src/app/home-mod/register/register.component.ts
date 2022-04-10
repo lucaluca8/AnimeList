@@ -52,7 +52,7 @@ export class RegisterComponent implements OnInit {
     const message =`Registration succsefully`;
     if(this.validatorForm.get('name').value==="" ||this.validatorForm.get('username').value==="" || 
       this.validatorForm.get('email').value==="" ||  this.validatorForm.get('password').value==="")
-      alert("You cannot leave empty fields")
+      alert("You cannot leave empty fields");
       else
         alert(message);
   }

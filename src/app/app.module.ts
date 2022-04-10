@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { ManageAccountComponent } from './manage-account/manage-account.component';
 import { FormsModule } from '@angular/forms';
+import { SupportComponent } from './support/support.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    ManageAccountComponent
+    ManageAccountComponent,
+    SupportComponent
   ],
   imports: [
     BrowserModule,

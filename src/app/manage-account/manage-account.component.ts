@@ -11,12 +11,7 @@ export class ManageAccountComponent implements OnInit {
 
   public  accounts=<any>[]
   id:number=null;
-  username:string = "";
-  accName:string = "";
   user:User = new User();
-  email:string="";
-  password:string="";
-
   constructor(private manageServices:ManageService) { }
 
   ngOnInit(): void {
@@ -24,26 +19,20 @@ export class ManageAccountComponent implements OnInit {
       this.accounts=data;
     });
   }
+
   getAccountId():void {
     this.accounts.forEach(data=>{
-      if(data.name === this.accName) {
+      if(data.name === this.user.name) {
         this.user=data;
         this.id=data.id;       
     }
     })
   }
+
   changeAccountInfo():void{
     
-    if(this.accName !="")
+    if(this.user.name !="")
     {
-      if(this.username !="")
-        this.user.username=this.username;
-      if(this.email!="")
-        this.user.email=this.email;
-      if(this.password!="")
-        this.user.password=this.password;
-      console.log(this.username)
-      this.getAccountId();
       this.manageServices.updateAccount(this.id,this.user).subscribe(data=>{
         console.log(data);
       });
@@ -53,9 +42,8 @@ export class ManageAccountComponent implements OnInit {
     }
   }
   deleteAccount():void{
-    if(this.accName !="")
+    if(this.user.name !="")
     {
-      this.getAccountId();
       this.manageServices.deleteAccount(this.id);
     }
     else{

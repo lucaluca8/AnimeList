@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ManageAccountComponent } from './manage-account/manage-account.component';
+import { SupportComponent } from './support/support.component';
 
 const routes: Routes = [
   {
     path:'search',
     loadChildren:()=>import('./search-mod/search-mod.module').then((module)=>(module).SearchModModule)
+  },
+  {
+    path:'support',
+    component:SupportComponent
   },
   {
     path:':ManageAccount',
