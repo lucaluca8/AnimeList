@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../home-mod/registerClass';
+import { User } from '../../home-mod/registerClass';
 import { ManageService } from './manage.service';
 
 @Component({
