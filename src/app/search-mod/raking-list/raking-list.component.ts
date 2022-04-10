@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AnimeInterface } from '../AnimeInterface';
 import { MatTableDataSource } from '@angular/material/table';
 import { TableService } from '../table.service';
 import { searchValidator } from './validator';

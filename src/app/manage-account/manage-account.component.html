@@ -8,32 +8,32 @@
         </h1>
         <div name="account" class="container">
           <div class="field" style="color:rgb(245, 11, 11);">
-            Introuduce account name here
+            Write the name associated with the account here
           </div>     
           <input type="text" placeholder="John Black" class="input"
           [(ngModel)]="accName" />
         </div>
         <div class="container">
-          <div class="field" style="color:white;">
+          <div class="field" style="color:black;">
             Username
           </div>
           <input type="text" placeholder="master32" class="input" [(ngModel)]="username">
         </div>
         <div class="container">
-            <div class="field" style="color:white;">
+            <div class="field" style="color:black;">
               E-mail
             </div>
             <input type="text" placeholder="something@something.com" class="input"
             [(ngModel)]="email">
           </div>
           <div class="container">
-            <div class="field" style="color:white;">
+            <div class="field" style="color:black;">
               Password
             </div>
             <input type="password" placeholder="Terminator342" class="input"
             required  [(ngModel)]="password">
             <button class="button is-rounded is-danger 
-            is-family-monospace is-black is-fullwidth" (click)="changeAccountInfo()">Update your account info </button>
+            is-family-monospace  is-fullwidth" (click)="changeAccountInfo()">Update your account info </button>
           </div>
         <div class="columns is-centered">         
       </div>
