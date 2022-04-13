@@ -28,6 +28,7 @@ export class ManageAnimeComponent implements OnInit {
         this.animeserv.addAnime(this.anime).subscribe(data=>{
           console.log(data);
         })
+        alert("Anime added :D");
       }
       else
       {
@@ -60,6 +61,7 @@ export class ManageAnimeComponent implements OnInit {
       {
           this.animeserv.updateAnime(this.id,this.anime).subscribe(data=>{
         });
+        alert("Updated anime info :)");
       }
       else
       {
@@ -78,6 +80,7 @@ export class ManageAnimeComponent implements OnInit {
       if(this.anime.image != "" && this.anime.description != "" && this.anime.rating !="" && this.anime.genre !=""&&this.anime.studio!="")
       {
          this.animeserv.deleteAnime(this.id);
+         alert("Anime deleted :(");
       }
       else
       {

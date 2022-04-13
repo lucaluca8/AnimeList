@@ -50,23 +50,24 @@ export class RegisterComponent implements OnInit {
 
   registerButton(){
     const message =`Registration succsefully`;
-    if(this.validatorForm.get('name').value==="" ||this.validatorForm.get('username').value==="" || 
+    if(this.validatorForm.get('name').value==="" || this.validatorForm.get('username').value==="" || 
       this.validatorForm.get('email').value==="" ||  this.validatorForm.get('password').value==="")
       alert("You cannot leave empty fields");
-      else
+    else if(!this.validatorForm.get('password').valid || !this.validatorForm.get('username').valid
+    ||!this.validatorForm.get('name').valid || !this.validatorForm.get('email').valid)
+        alert("Something went wrong. Check the fields for errors")
+    else
+      {
+        this.homeService.addAccount(this.user).subscribe(data=>{
+          console.log(data);
+        })
         alert(message);
-  }
-  addAccount(){
-
-    this.homeService.addAccount(this.user).subscribe(data=>{
-      console.log(data);
-    })
-    console.log(this.user.name);
+      }
+      console.log(this.user.name);
     console.log(this.user.username);
     console.log(this.user.email);
     console.log(this.user.password);
   }
-  
   
   }
 

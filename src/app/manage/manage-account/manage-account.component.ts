@@ -36,6 +36,7 @@ export class ManageAccountComponent implements OnInit {
       this.manageServices.updateAccount(this.id,this.user).subscribe(data=>{
         console.log(data);
       });
+      alert("Updated account info :)")
     }
     else{
       alert("You need to introduce an account name first")
@@ -45,6 +46,7 @@ export class ManageAccountComponent implements OnInit {
     if(this.user.name !="")
     {
       this.manageServices.deleteAccount(this.id);
+      alert("The account has been deleted :(")
     }
     else{
       alert("You need to introduce an account name first")

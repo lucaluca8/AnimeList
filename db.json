@@ -35,7 +35,7 @@
       "name": "My Dress-up Darling",
       "rating": "8.44",
       "nr_episodes": 12,
-      "studio": "Clover Works",
+      "studio": "CloverWorks",
       "genre": "Romance, Slice of Life",
       "image": "https://sequentialplanet.com/wp-content/uploads/2022/01/assistir-sono-bisque-doll-wa-koi-wo-suru-todos-os-episodios-legendado-hd-animesrubro-online.jpg",
       "description": "High school student Wakana Gojou spends his days perfecting the art of making hina dolls, hoping to eventually reach his grandfather's level of expertise. While his fellow teenagers busy themselves with pop culture, Gojou finds bliss in sewing clothes for his dolls. Nonetheless, he goes to great lengths to keep his unique hobby a secret, as he believes that he would be ridiculed were it revealed. Enter Marin Kitagawa, an extraordinarily pretty girl whose confidence and poise are in stark contrast to Gojou's meekness. It would defy common sense for the friendless Gojou to mix with the likes of Kitagawa, who is always surrounded by her peers. However, the unimaginable happens when Kitagawa discovers Gojou's prowess with a sewing machine and brightly confesses to him about her own hobby: cosplay. Because her sewing skills are pitiable, she decides to enlist his help. As Gojou and Kitagawa work together on one cosplay outfit after another, they cannot help but grow close—even though their lives are worlds apart."
@@ -85,7 +85,7 @@
       "name": "Balance: Unlimited",
       "rating": "7.53",
       "nr_episodes": 11,
-      "studio": "Clover Works",
+      "studio": "CloverWorks",
       "genre": "Comedy, Mystery",
       "image": "https://m.media-amazon.com/images/M/MV5BMTlkZGVjZTYtZWU1MS00NzY4LWEzNjEtN2EwZDJjMzIzZWQ2XkEyXkFqcGdeQXVyMzI2Mjc1NjQ@._V1_SX300.jpg",
       "description": "Daisuke Kanbe, a man of extraordinary wealth, is assigned to the Modern Crime Prevention Headquarters as a detective. It is there that he gets partnered with Haru Katou, a humane detective who values justice above all. The two are polar opposites, and their morals clash time and time again. Haru despises Daisuke for using monetary wealth to solve cases, as he believes that money isn't everything. The two will have to combine their efforts, however, to solve the mysteries that are coming their way."
@@ -112,7 +112,7 @@
     },
     {
       "name": "Naruto",
-      "rating": "7.97",
+      "rating": "7.87",
       "nr_episodes": "220",
       "studio": "Studio Pierrot",
       "genre": "Action, Adventure, Fantasy",
@@ -129,6 +129,29 @@
       "password": "Tsjdhfvs21",
       "security": "Fefe",
       "id": 1
+    },
+    {
+      "name": "asd",
+      "username": "asd",
+      "email": "asd@asd.ro",
+      "password": "asdA2",
+      "security": "ASD",
+      "id": 2
+    },
+    {
+      "name": "asd",
+      "username": "asd",
+      "email": "asdas@asd.ro",
+      "password": "asd",
+      "security": "da",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "password": "asd",
+      "id": 5
     }
   ]
 }
