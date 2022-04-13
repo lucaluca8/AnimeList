@@ -55,7 +55,7 @@
       "name": "Tokyo Revengers",
       "rating": "8.16",
       "nr_episodes": 24,
-      "studio": "Linden Films",
+      "studio": "Liden Films",
       "genre": "Action, Drama, Supernatural",
       "image": "https://img.bunnycdnn.ru/_r/300x400/100/c0/4e/c04ee7106ea54910abdd39563d239374/c04ee7106ea54910abdd39563d239374.jpg",
       "description": "Takemichi Hanagaki’s second year of middle school was the highest point in his life. He had respect, a gang of friends he could count on, and even a girlfriend. But that was twelve years ago. Today, he’s a nobody: a washed-up nonentity made fun of by children and always forced to apologize to his younger boss. A sudden news report on the Tokyo Manji Gang’s cruel murder of the only girlfriend he ever had alongside her brother only adds insult to injury. Half a second before a train ends his pitiful life for good, Takemichi flashes back to that same day twelve years ago, when he was still dating Hinata Tachibana. After being forced to relive the very same day that began his downward spiral, Takemichi meets Hinata’s younger brother. Without thinking, he admits to his seeming death before flashing back to the past. Takemichi urges him to protect his sister before inexplicably returning to the future. Miraculously, he isn’t dead. Stranger still, the future has changed. It seems as though Takemichi can alter the flow of time. Given the chance to prevent his ex-girlfriend’s tragic death at the hands of the Tokyo Manji Gang, Takemichi decides to fly through time to change the course of the future."
@@ -119,6 +119,29 @@
       "image": "https://i.ebayimg.com/images/g/vUQAAOSwq~xfte5n/s-l400.jpg",
       "description": "Moments prior to Naruto Uzumaki's birth, a huge demon known as the Kyuubi, the Nine-Tailed Fox, attacked Konohagakure, the Hidden Leaf Village, and wreaked havoc. In order to put an end to the Kyuubi's rampage, the leader of the village, the Fourth Hokage, sacrificed his life and sealed the monstrous beast inside the newborn Naruto.\n\nNow, Naruto is a hyperactive and knuckle-headed ninja still living in Konohagakure. Shunned because of the Kyuubi inside him, Naruto struggles to find his place in the village, while his burning desire to become the Hokage of Konohagakure leads him not only to some great new friends, but also some deadly foes.",
       "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "name": "FLCL",
+      "rating": "12",
+      "nr_episodes": "12",
+      "studio": "ff",
+      "genre": "fff",
+      "image": "sfs",
+      "description": "sirugfvbilau",
+      "id": 14
+    },
+    {
+      "name": "FLCL",
+      "rating": "12",
+      "nr_episodes": "12",
+      "studio": "ff",
+      "genre": "fff",
+      "image": "sfs",
+      "description": "sirugfvbilau",
+      "id": 15
     }
   ],
   "accounts": [

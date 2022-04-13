@@ -12,10 +12,6 @@ const routes: Routes = [
     path:'support',
     component:SupportComponent
   },
-  {
-    path:':ManageAccount',
-    component:ManageAccountComponent
-  },
   { 
     path:'',
     loadChildren:()=>import('./home-mod/home-mod.module').then((module)=>(module).HomeModModule)

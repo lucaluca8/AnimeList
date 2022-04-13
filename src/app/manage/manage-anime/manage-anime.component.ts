@@ -27,7 +27,7 @@ export class ManageAnimeComponent implements OnInit {
       {
         this.animeserv.addAnime(this.anime).subscribe(data=>{
           console.log(data);
-        })
+        });
         alert("Anime added :D");
       }
       else
