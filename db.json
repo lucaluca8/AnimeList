@@ -112,36 +112,13 @@
     },
     {
       "name": "Naruto",
-      "rating": "7.87",
+      "image": "https://i.ebayimg.com/images/g/vUQAAOSwq~xfte5n/s-l400.jpg",
+      "rating": "7.97",
       "nr_episodes": "220",
       "studio": "Studio Pierrot",
       "genre": "Action, Adventure, Fantasy",
-      "image": "https://i.ebayimg.com/images/g/vUQAAOSwq~xfte5n/s-l400.jpg",
       "description": "Moments prior to Naruto Uzumaki's birth, a huge demon known as the Kyuubi, the Nine-Tailed Fox, attacked Konohagakure, the Hidden Leaf Village, and wreaked havoc. In order to put an end to the Kyuubi's rampage, the leader of the village, the Fourth Hokage, sacrificed his life and sealed the monstrous beast inside the newborn Naruto.\n\nNow, Naruto is a hyperactive and knuckle-headed ninja still living in Konohagakure. Shunned because of the Kyuubi inside him, Naruto struggles to find his place in the village, while his burning desire to become the Hokage of Konohagakure leads him not only to some great new friends, but also some deadly foes.",
       "id": 12
-    },
-    {
-      "id": 13
-    },
-    {
-      "name": "FLCL",
-      "rating": "12",
-      "nr_episodes": "12",
-      "studio": "ff",
-      "genre": "fff",
-      "image": "sfs",
-      "description": "sirugfvbilau",
-      "id": 14
-    },
-    {
-      "name": "FLCL",
-      "rating": "12",
-      "nr_episodes": "12",
-      "studio": "ff",
-      "genre": "fff",
-      "image": "sfs",
-      "description": "sirugfvbilau",
-      "id": 15
     }
   ],
   "accounts": [
@@ -154,20 +131,20 @@
       "id": 1
     },
     {
-      "name": "asd",
-      "username": "asd",
-      "email": "asd@asd.ro",
-      "password": "asdA1",
-      "security": "asd",
-      "id": 2
-    },
-    {
       "name": "ghj",
       "username": "ghj",
       "email": "ghj@ghj.ro",
       "password": "asd1A",
       "security": "asd",
       "id": 3
+    },
+    {
+      "name": "asdkhba ajba",
+      "username": "saidga",
+      "email": "asdasd@yahoo.com",
+      "password": "szdaT5",
+      "security": "aisd",
+      "id": 4
     }
   ]
 }

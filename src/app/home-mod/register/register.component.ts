@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { HomeServiceService } from '../home-service.service';
 import { User } from '../registerClass';
@@ -15,7 +16,7 @@ export class RegisterComponent implements OnInit {
 
   user:User = new User();
 
-  constructor(public fb:FormBuilder,private homeService:HomeServiceService,private route:Router) { }
+  constructor(public fb:FormBuilder,private homeService:HomeServiceService,private route:Router,private snackBar:MatSnackBar) { }
 
   validatorForm:FormGroup;
   public  accounts=<any>[]
@@ -53,10 +54,12 @@ export class RegisterComponent implements OnInit {
     const message =`Registration succsefully`;
     if(this.validatorForm.get('name').value==="" || this.validatorForm.get('username').value==="" || 
       this.validatorForm.get('email').value==="" ||  this.validatorForm.get('password').value==="")
-      alert("You cannot leave empty fields");
+      //alert("You cannot leave empty fields");
+      this.snackBar.open("You cannot leave empty fields","",{duration: 1000});
     else if(!this.validatorForm.get('password').valid || !this.validatorForm.get('username').valid
     ||!this.validatorForm.get('name').valid || !this.validatorForm.get('email').valid)
-        alert("Something went wrong. Check the fields for errors")
+        //alert("Something went wrong. Check the fields for errors")
+        this.snackBar.open("Something went wrong. Check the fields for errors","",{duration: 1000});
     else
       {
         this.homeService.addAccount(this.user).subscribe(data=>{
