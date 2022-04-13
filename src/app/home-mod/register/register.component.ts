@@ -61,6 +61,9 @@ export class RegisterComponent implements OnInit {
         this.homeService.addAccount(this.user).subscribe(data=>{
           console.log(data);
         })
+        this.homeService.getAccounts().subscribe(data=>{
+          console.log(data);
+        })
         alert(message);
       }
       console.log(this.user.name);

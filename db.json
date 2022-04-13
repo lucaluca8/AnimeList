@@ -157,24 +157,9 @@
       "name": "asd",
       "username": "asd",
       "email": "asd@asd.ro",
-      "password": "asdA2",
-      "security": "ASD",
+      "password": "asdA1",
+      "security": "asd",
       "id": 2
-    },
-    {
-      "name": "asd",
-      "username": "asd",
-      "email": "asdas@asd.ro",
-      "password": "asd",
-      "security": "da",
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "password": "asd",
-      "id": 5
     }
   ]
 }
