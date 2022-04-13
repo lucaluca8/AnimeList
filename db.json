@@ -160,6 +160,14 @@
       "password": "asdA1",
       "security": "asd",
       "id": 2
+    },
+    {
+      "name": "ghj",
+      "username": "ghj",
+      "email": "ghj@ghj.ro",
+      "password": "asd1A",
+      "security": "asd",
+      "id": 3
     }
   ]
 }

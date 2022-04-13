@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { HomeServiceService } from '../home-service.service';
 import { User } from '../registerClass';
 import { nameValidator,specialCharactersValidator,emailValidator, 
@@ -14,7 +15,7 @@ export class RegisterComponent implements OnInit {
 
   user:User = new User();
 
-  constructor(public fb:FormBuilder,private homeService:HomeServiceService) { }
+  constructor(public fb:FormBuilder,private homeService:HomeServiceService,private route:Router) { }
 
   validatorForm:FormGroup;
   public  accounts=<any>[]
@@ -64,9 +65,9 @@ export class RegisterComponent implements OnInit {
         this.homeService.getAccounts().subscribe(data=>{
           console.log(data);
         })
-        alert(message);
+        this.route.navigate([`/login/`]);
       }
-      console.log(this.user.name);
+    console.log(this.user.name);
     console.log(this.user.username);
     console.log(this.user.email);
     console.log(this.user.password);

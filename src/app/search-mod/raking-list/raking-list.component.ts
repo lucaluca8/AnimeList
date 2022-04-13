@@ -4,6 +4,7 @@ import { TableService } from '../table.service';
 import { searchValidator } from './validator';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -24,7 +25,7 @@ check:boolean = false;
 validatorForm:FormGroup;
   dataSource: MatTableDataSource<unknown>;
 
-constructor(private tableService: TableService, public fb:FormBuilder  ) {}
+constructor(private tableService: TableService, public fb:FormBuilder,private route:Router) {}
 
 ngOnInit(): void {
   this.validatorForm=this.fb.group(
@@ -78,9 +79,9 @@ searchFunction(){
       if(data.name==this.inputSb) {
       this.searchResult=data;
       if(this.check === false)
-      alert("Anime found!! \n Press again to go to anime page :)");
       this.check = true;
       this.searchedId=this.searchResult.id;
+      this.route.navigate([`/search/${this.searchedId}`]);
       
     }})
       

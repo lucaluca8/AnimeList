@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HomeServiceService } from '../home-service.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class LoginComponent implements OnInit {
   username: string = "";
   password: string = "";
   public  accounts=<any>[]
-  constructor(private homeService:HomeServiceService) { }
+  constructor(private homeService:HomeServiceService,private route:Router) { }
 
   ngOnInit(): void {
       this.homeService.getAccounts().subscribe(data=>{
@@ -28,6 +29,7 @@ export class LoginComponent implements OnInit {
       this.accounts.forEach(data=>{
         if(data.username === this.username && data.password === this.password) {
           check = true;
+        this.route.navigate([`/search`]);
         alert("LogIn succesfully");       
       }
       console.log(data.username)
