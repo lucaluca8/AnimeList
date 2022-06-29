@@ -113,7 +113,7 @@
     {
       "name": "Naruto",
       "image": "https://i.ebayimg.com/images/g/vUQAAOSwq~xfte5n/s-l400.jpg",
-      "rating": "7.97",
+      "rating": "7.96",
       "nr_episodes": "220",
       "studio": "Studio Pierrot",
       "genre": "Action, Adventure, Fantasy",
@@ -145,6 +145,22 @@
       "password": "szdaT5",
       "security": "aisd",
       "id": 4
+    },
+    {
+      "name": "Tata",
+      "username": "tete23",
+      "email": "aaaa.opsr@yahoo.com",
+      "password": "T4gg",
+      "security": "Rita",
+      "id": 5
+    },
+    {
+      "name": "Ana",
+      "username": "ana21",
+      "email": "ana.oprea@yahoo.com",
+      "password": "Terminator21",
+      "security": "Kiki",
+      "id": 6
     }
   ]
 }
